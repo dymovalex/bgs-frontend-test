@@ -1,12 +1,10 @@
 <template>
-   <div>Init nuxt app</div>
+  <div>
+    <nuxt />
+  </div>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-    }
-  }
 }
 </script>
