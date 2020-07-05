@@ -2,20 +2,22 @@
 
 const authRequest = ( email, password ) => {
   return new Promise((resolve, reject) => {
-    if(email !== 'test@gmail.com' || password !== 'qwerty') {
-      reject('Wrong credentials');
-    } else {
-      resolve(true);
-    }
+    setTimeout(() => {
+      if(email !== 'test@gmail.com' || password !== 'qwerty') {
+        reject('Wrong credentials');
+      } else {
+        resolve(true);
+      }
+    }, 1000);
   });
 }
 
 const userDataRequest = () => {
-  return Promise.resolve({
-    name: 'John Doe',
-    email: 'test@gmail.com',
-    avatar: '/avatar.jpg'
-  });
+    return Promise.resolve({
+      name: 'John Doe',
+      email: 'test@gmail.com',
+      avatar: '/avatar.jpg'
+    });
 }
 
 // Store

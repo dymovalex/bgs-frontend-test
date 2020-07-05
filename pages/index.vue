@@ -15,7 +15,12 @@
             <span>{{ user.email }}</span>
           </v-col>
            <v-col cols="12" sm="1">
-            <v-btn @click="logOut" dark icon class="secondary"><v-icon>exit_to_app</v-icon></v-btn>
+             <v-tooltip top>
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn @click="logOut" v-on="on" v-bind="attrs" dark icon class="secondary"><v-icon>exit_to_app</v-icon></v-btn>
+              </template>
+              <span>Log out</span>
+            </v-tooltip>
           </v-col>
         </v-row>
       </v-card>

@@ -46,6 +46,7 @@ export default {
   /*
   ** Nuxt.js dev-modules
   */
+
   buildModules: [
     '@nuxtjs/vuetify',
   ],
@@ -82,6 +83,12 @@ export default {
       }
     }
   },
+
+  loading: {
+    color: 'blue',
+    height: '5px'
+  },
+  
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
