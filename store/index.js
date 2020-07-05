@@ -1,4 +1,5 @@
 // Utils
+
 const authRequest = ( email, password ) => {
   return new Promise((resolve, reject) => {
     if(email !== 'test@gmail.com' || password !== 'qwerty') {
@@ -10,16 +11,19 @@ const authRequest = ( email, password ) => {
 }
 
 const userDataRequest = () => {
-  console.log('inside userDataRequest');
   return Promise.resolve({
     name: 'John Doe',
-    email: 'test@gmail.com'
+    email: 'test@gmail.com',
+    avatar: '/avatar.jpg'
   });
 }
 
+// Store
+
 export const state = () => ({
   user: null,
-  authorized: false
+  authorized: false,
+  error: ''
 });
 
 export const mutations = {
@@ -28,6 +32,9 @@ export const mutations = {
   },
   setUserData(state, user) {
     state.user = user;
+  },
+  setError(state, error) {
+    state.error = error;
   }
 };
 
@@ -39,22 +46,17 @@ export const actions = {
       dispatch('getUserData');
     } catch (error) {
       commit('setAuth', false);
-      console.log(error);
+      commit('setError', error);
+      setTimeout(() => commit('setError', ''), 3000);
     }
   },
 
   async getUserData ({ commit }) {
     try {
       const user = await userDataRequest();
-      console.log(user);
       commit('setUserData', user);
     } catch (error) {
       commit('setUserData', null);
-      console.log(error);
     }
   }
-};
-
-export const getters = {
-  //authorized: state => !!state.user
 };

@@ -1,20 +1,14 @@
-# bgs-frontend-test
+# Тестовое задание на позицию Junior Frontend-разработчик (Vue/NuxtJS) в компанию BGS Group
 
-## Build Setup
+## Установка и запуск
 
 ```bash
-# install dependencies
 $ npm install
-
-# serve with hot reload at localhost:3000
 $ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
 ```
+Перейти по ссылке [localhost:3000](http://localhost:3000)
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Данные для авторизации
+
+email: test@gmail.com
+password: qwerty
