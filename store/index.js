@@ -51,6 +51,11 @@ export const actions = {
     }
   },
 
+  logOut ({ commit }) {
+    commit('setUserData', null);
+    commit('setAuth', false);
+  },
+
   async getUserData ({ commit }) {
     try {
       const user = await userDataRequest();

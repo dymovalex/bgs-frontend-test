@@ -7,8 +7,8 @@
         </v-alert>
         <h1>Log in</h1>
         <v-form>
-          <v-text-field v-model="email" label="Email" required></v-text-field>
-          <v-text-field v-model="password" label='Password' required></v-text-field>
+          <v-text-field v-model="email" label="Email" prepend-icon="email" required></v-text-field>
+          <v-text-field v-model="password" label='Password' prepend-icon="lock" required></v-text-field>
           <v-btn class="primary" @click="onSubmit">log in</v-btn>
         </v-form>
       </v-card>
